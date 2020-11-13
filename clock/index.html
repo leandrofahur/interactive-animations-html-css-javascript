@@ -3,42 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clock</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
     <style>
-      * {
-        /* margin: 0; */
-        padding: 0;
-        box-sizing: border-box;
+      html,
+      body {
+        background-color: #333;
+        height: 100vh;
       }
-      .bg {
+      .box {
         background-color: #000;
-        height: 300px;
         width: 300px;
+        height: 300px;
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
-      .clock {
-        background-color: #fff;
-        height: 250px;
+      .circle {
+        display: inline-block;
         width: 250px;
+        height: 250px;
+        background-color: #fff;
+        border-radius: 50%;
         position: relative;
         top: 25px;
         left: 25px;
+        animation: rotate 8s linear forwards infinite;
+      }
+
+      .icon1 {
+        width: 80px;
+        height: 80px;
+        background-color: lightgray;
         border-radius: 50%;
+        position: relative;
+        top: 0;
+        left: 0;
+        animation: rotate-counter 8s linear infinite;
+      }
+
+      .icon1 i {
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .icon2 {
+        width: 80px;
+        height: 80px;
+        background-color: lightgray;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .icon2 i {
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .icon3 {
+        width: 80px;
+        height: 80px;
+        background-color: lightgray;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation: rotate-counter 8s linear infinite;
+      }
+
+      .icon3 i {
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .icon4 {
+        width: 80px;
+        height: 80px;
+        background-color: lightgray;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        animation: rotate-counter 8s linear infinite;
+      }
+
+      .icon4 i {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes rotate-counter {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(-360deg);
+        }
       }
     </style>
   </head>
   <body>
-    <div class="bg">
-      <div class="clock">
-        <div class="hours-container">
-          <div class="hours"></div>
-        </div>
-        <div class="minutes-container">
-          <div class="minutes"></div>
-        </div>
-        <div class="seconds-container">
-          <div class="seconds"></div>
-        </div>
+    <div class="box">
+      <div class="circle">
+        <div class="icon1"><i class="huge node icon"></i></div>
+
+        <div class="icon2"><i class="huge react icon"></i></div>
+        <div class="icon3"><i class="huge angular icon"></i></div>
+        <div class="icon4"><i class="huge vuejs icon"></i></div>
       </div>
     </div>
   </body>
