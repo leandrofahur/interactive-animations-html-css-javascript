@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <style>
+      * {
+        /* margin: 0; */
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .bg {
+        background-color: #000;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+      }
+      .clock {
+        background-color: #fff;
+        height: 250px;
+        width: 250px;
+        position: relative;
+        top: 25px;
+        left: 25px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="clock">
+        <div class="hours-container">
+          <div class="hours"></div>
+        </div>
+        <div class="minutes-container">
+          <div class="minutes"></div>
+        </div>
+        <div class="seconds-container">
+          <div class="seconds"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
